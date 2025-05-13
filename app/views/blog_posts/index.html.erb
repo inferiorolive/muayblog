@@ -1,1 +1,8 @@
-<h1>Muay Blog</h1>
+<h1>Muayblog</h1>
+
+<% @blog_posts.each do |blog_post| %>
+  <div>
+    <h2><%= blog_post.title %></h2>
+    <%= blog_post.body %>
+  </div>
+<% end %>
