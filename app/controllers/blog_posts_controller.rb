@@ -6,6 +6,7 @@ class BlogPostsController < ApplicationController
   def show
     @blog_post = BlogPost.find(params[:id])
   # Helper method to redirect to root ("/") when show action doesn't return a blog post
+  # It handles errors and sends people to another location
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path
   end
