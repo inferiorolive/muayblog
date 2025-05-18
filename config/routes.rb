@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   root "blog_posts#index"
 
   # Look up posts by ID in URL
-  get "/blog_posts/:id", to: "blog_posts#show"
+  # as: enables us to access blog_post_path and blog_post_url
+  get "/blog_posts/:id", to: "blog_posts#show", as: :blog_post
 
   #  GET /jade   →  JadeController#awesome
   get "/jade", to: "jade#awesome"
