@@ -14,7 +14,9 @@ Rails.application.routes.draw do
 
   # Look up posts by ID in URL
   # as: enables us to access blog_post_path and blog_post_url
+  get "/blog_posts/new", to: "blog_posts#new", as: :new_blog_post
   get "/blog_posts/:id", to: "blog_posts#show", as: :blog_post
+  post "/blog_posts", to: "blog_posts#create", as: :blog_posts
 
   #  GET /jade   →  JadeController#awesome
   get "/jade", to: "jade#awesome"
