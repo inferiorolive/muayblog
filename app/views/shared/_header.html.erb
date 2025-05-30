@@ -28,8 +28,21 @@
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-centered">
-      <p class="title">Title</p>
-      <p class="subtitle">Subtitle</p>
+      <p class="title">
+        <% if content_for(:title) %>
+          <%= yield :title %>
+        <% else %>
+          Muayblog
+        <% end %>
+        </p>
+      <p class="subtitle">
+              <% if content_for(:subtitle) %>
+          <%= yield :subtitle %>
+        <% else %>
+        
+        <% end %>
+        </p>
+      </p>
     </div>
   </div>
 
