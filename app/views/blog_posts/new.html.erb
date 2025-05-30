@@ -1,5 +1,6 @@
-<h1>Create a new blog post</h1>
-
+<% content_for :title do %>
+Create a new blog post
+<% end %>
 
 <%= form_with model: @blog_post do |form| %> 
   <div>
